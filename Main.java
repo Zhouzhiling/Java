@@ -5,8 +5,17 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 public class Main {
 
+    public static int CalculateSum(int i1,int i2)
+    {
+        int sum=0;
+        for(int i=i1;i<i2;i++)
+            sum += i;
+        return sum;
+    }
+
     public static void main(String[] args) {
 
+        System.out.println("Sum from 10 to 50 is " + CalculateSum(10,50));
         /*计算当前时间*/
 //        long totalMillis = System.currentTimeMillis();
 //        long totalSeconds = totalMillis / 1000;
@@ -115,15 +124,134 @@ public class Main {
 //            System.out.println("No!");
 
         /*确认对话框*/
-        int option = JOptionPane.showConfirmDialog(null,"Continue");
-        switch (option)
-        {
-            case JOptionPane.YES_OPTION:System.out.println("Yes");break;
-            case JOptionPane.NO_OPTION:System.out.println("NO");break;
-            case JOptionPane.CANCEL_OPTION:System.out.println("Cancel");break;
-            default:System.out.println("???");break;
+//        int option = JOptionPane.showConfirmDialog(null,"Continue");
+//        switch (option)
+//        {
+//            case JOptionPane.YES_OPTION:System.out.println("Yes");break;
+//            case JOptionPane.NO_OPTION:System.out.println("NO");break;
+//            case JOptionPane.CANCEL_OPTION:System.out.println("Cancel");break;
+//            default:System.out.println("???");break;
+//        }
 
+//        /*解一元二次方程*/
+//        Scanner Input = new Scanner(System.in);
+//        System.out.println("ax^2 + bx + c = 0");
+//        System.out.println("Please input a, b, c:");
+//        int a = Input.nextInt();
+//        int b = Input.nextInt();
+//        int c = Input.nextInt();
+//        //if real roots exist
+//        double real = Math.pow(b,2) - 4 * a * c;
+//        if(real < 0)
+//        {
+//            System.out.println("No real root exists!");
+//        }
+//        else if (real == 0)
+//        {
+//            System.out.println("One real root exists!");
+//            double result = -b / (2*a);
+//            System.out.println("The only result is " + result);
+//        }
+//        else
+//        {
+//            System.out.println("Two real root exists!");
+//            double result1 = (-b + Math.pow(real,1/2))/(2*a);
+//            double result2 = (-b - Math.pow(real,1/2))/(2*a);
+//            System.out.println("The two results are " + result1 + " and " + result2);
+//        }
 
+        /*4-4 sentinel Value.java*/
+//        int sum = 0;
+//        Scanner Input = new Scanner(System.in);
+//        System.out.print("Enter an int value(exit at zero):");
+//        int data = Input.nextInt();
+//        while(data != 0)
+//        {
+//            sum += data;
+//            System.out.println("Current value = " + sum);
+//            System.out.print("Enter an int value(exit at zero):");
+//            data = Input.nextInt();
+//        }
+//        System.out.print("The total sum is " + sum);
+
+//        /*在五行中显示前50个素数*/
+//        int num=1,i;
+//        int count = 0;
+//        while(count < 50)
+//        {
+//            num ++;
+//            boolean isPrime = true;
+//            for(i=2;i<=num/2;i++)
+//            {
+//                if (num % i == 0)
+//                {
+//                    isPrime = false;
+//                    break;
+//                }
+//            }
+//            if(isPrime)
+//            {
+//                count++;
+//                System.out.print(num + " ");
+//                if(count % 10 == 0)
+//                    System.out.print("\n");
+//            }
+//        }
+//        /*在五行中显示前50个素数end*/
+
+        /*循环对话框*/
+//    int option = JOptionPane.YES_OPTION;
+//    while(option == JOptionPane.YES_OPTION)
+//    {
+//        System.out.println("Continue loop!");
+//        option = JOptionPane.showConfirmDialog(null,"Continues???");
+//    }
+        /*循环对话框end*/
+
+//    /*程序清单5.8 输入十进制数转化成十六进制*/
+//        Scanner Input = new Scanner(System.in);
+//        System.out.print("Please input a number:");
+//        int numberInDec = Input.nextInt();
+//        System.out.println("The number in hex is:" + FromDecToHex(numberInDec));
+//    /*程序清单5.8 输入十进制数转化成十六进制end*/
+
+//    /*程序清单5-11 生成随机小写字母*/
+//    int looptime = 20;
+//    while(looptime-- != 0)
+//    {
+//        char tmp = (char)('a' + Math.random() * ('z'-'a' + 1));
+//        System.out.printf("%c",tmp);
+//    }
+//    /*程序清单5-11 生成随机小写字母end*/
+
+        int[] tmp = {1,2,3,4,5,6,7};
+        int[] after = new int [7];
+        System.arraycopy(tmp,0,after,0,tmp.length);
+        for (int t:after
+             ) {
+            System.out.println(t+10);
         }
+
+
     }
+//    /*程序清单5.8 输入十进制数转化成十六进制的函数*/
+//    public static String FromDecToHex(int numberInDec)
+//    {
+//        String res = "";
+//        while(numberInDec != 0)
+//        {
+//            int tmp = numberInDec % 16;
+//            res = transfer(tmp) + res;
+//            numberInDec = numberInDec / 16;
+//        }
+//        return res;
+//    }
+//    public static char transfer(int tmp)
+//    {
+//        if(tmp >= 0 && tmp <= 9)
+//            return (char)(tmp + '0');
+//        else
+//            return (char)(tmp - 10 + 'A');
+//    }
+//    /*程序清单5.8 输入十进制数转化成十六进制的函数end*/
 }
