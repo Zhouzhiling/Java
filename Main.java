@@ -5,17 +5,21 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 public class Main {
 
-    public static int CalculateSum(int i1,int i2)
-    {
-        int sum=0;
-        for(int i=i1;i<i2;i++)
-            sum += i;
-        return sum;
-    }
-
+//    /*求i1到i2的和*/
+//    public static int CalculateSum(int i1,int i2)
+//    {
+//        int sum=0;
+//        for(int i=i1;i<i2;i++)
+//            sum += i;
+//        return sum;
+//    }
+//    /*求i1到i2的和end*/
     public static void main(String[] args) {
 
-        System.out.println("Sum from 10 to 50 is " + CalculateSum(10,50));
+        /*求i1到i2的和*/
+        //System.out.println("Sum from 10 to 50 is " + CalculateSum(10,50));
+        /*求i1到i2的和end*/
+
         /*计算当前时间*/
 //        long totalMillis = System.currentTimeMillis();
 //        long totalSeconds = totalMillis / 1000;
@@ -223,17 +227,51 @@ public class Main {
 //        System.out.printf("%c",tmp);
 //    }
 //    /*程序清单5-11 生成随机小写字母end*/
+//
+//        int[] tmp = {1,2,3,4,5,6,7};
+//        int[] after = new int [7];
+//        System.arraycopy(tmp,0,after,0,tmp.length);
+//        for (int t:after
+//             ) {
+//            System.out.println(t+10);
+//        }
 
-        int[] tmp = {1,2,3,4,5,6,7};
-        int[] after = new int [7];
-        System.arraycopy(tmp,0,after,0,tmp.length);
-        for (int t:after
-             ) {
-            System.out.println(t+10);
-        }
+//        /*不定数目的输入参数*/
+//        printMax(5,29,45,7,5,1);
+//        printMax(new int[]{6,5,4,3,3,555,1});
+//        /*不定数目的输入参数end*/
 
+        /*数组的比较和fill用法*/
+//        int[] list = {1,2,3,4};
+//        int[] list1 = {1,2,3,4};
+//        int[] list2 = {4,2,7,10};
+//        java.util.Arrays.fill(list,5);
+//        for (int tmp:list
+//             ) {
+//            System.out.print(tmp + " ");
+//        }
+//        System.out.println(java.util.Arrays.equals(list,list1));
+//        System.out.println(java.util.Arrays.equals(list2,list1));
+        /*数组的比较和fill用法end*/
 
+        int [][] triangleArray = new int [5][];
+        triangleArray[0] = new int[5];
+        triangleArray[1] = new int[4];
+        triangleArray[2] = new int[3];
+        triangleArray[3] = new int[2];
+        triangleArray[4] = new int[1];
     }
+
+//    /*不定数目的输入参数*/
+//    public static void printMax(int ... input)
+//    {
+//        int tmp = -1;
+//        for(int i=0;i<input.length;i++)
+//            if(input[i] > tmp)
+//                tmp = input[i];
+//        System.out.println("The max number is " + tmp );
+//    }
+//    /*不定数目的输入参数end*/
 //    /*程序清单5.8 输入十进制数转化成十六进制的函数*/
 //    public static String FromDecToHex(int numberInDec)
 //    {
@@ -255,3 +293,4 @@ public class Main {
 //    }
 //    /*程序清单5.8 输入十进制数转化成十六进制的函数end*/
 }
+
