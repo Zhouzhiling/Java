@@ -1,8 +1,11 @@
 package com.company;
 import jdk.nashorn.internal.scripts.JO;
 
+import java.io.PrintWriter;
+import java.util.Random;
 import java.util.Scanner;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+
 public class Main {
 
 //    /*求i1到i2的和*/
@@ -14,7 +17,7 @@ public class Main {
 //        return sum;
 //    }
 //    /*求i1到i2的和end*/
-    public static void main(String[] args) {
+    public static void main(String[] args)  throws Exception{
 
         /*求i1到i2的和*/
         //System.out.println("Sum from 10 to 50 is " + CalculateSum(10,50));
@@ -254,13 +257,97 @@ public class Main {
 //        System.out.println(java.util.Arrays.equals(list2,list1));
         /*数组的比较和fill用法end*/
 
-        int [][] triangleArray = new int [5][];
-        triangleArray[0] = new int[5];
-        triangleArray[1] = new int[4];
-        triangleArray[2] = new int[3];
-        triangleArray[3] = new int[2];
-        triangleArray[4] = new int[1];
+//        /*锯齿矩阵*/
+//        int [][] triangleArray = new int [5][];
+//        triangleArray[0] = new int[5];
+//        triangleArray[1] = new int[4];
+//        triangleArray[2] = new int[3];
+//        triangleArray[3] = new int[2];
+//        triangleArray[4] = new int[1];
+//        /*锯齿矩阵end*/
+
+//        /*class用法*/
+//        Circle1 circle1 = new Circle1();
+//        Circle1 circle2 = new Circle1(25);
+//        Circle1 circle3 = new Circle1(125);
+//        System.out.println("area of circle1 of radius " + circle1.radius + " is " + circle1.getArea());
+//        System.out.println("area of circle2 of radius " + circle2.radius + " is " + circle2.getArea());
+//        System.out.println("area of circle3 of radius " + circle3.radius + " is " + circle3.getArea());
+//
+//        circle3.radius = 1;
+//        System.out.println("area of circle3 of radius " + circle3.radius + " is " + circle3.getArea());
+//        /*class用法end*/
+
+        /*随机类*/
+//        java.util.Date date = new java.util.Date();
+//        Random random1 = new Random();
+//        System.out.println(random1.nextInt(20));
+//        System.out.println(date.toString());
+        /*随机类*/
+
+//        /*跳出一个窗口*/
+//        JFrame frame1 = new JFrame();
+//        frame1.setTitle("2017.09.22 7:48");
+//        frame1.setSize(200,150);
+//        frame1.setLocation(200,100);
+//        frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame1.setVisible(true);
+//        /*跳出一个窗口end*/
+
+//        /*程序清单9-7 WriteData.java*/
+//        java.io.File file = new java.io.File("scores.txt");
+//        if(file.exists())
+//        {
+//            System.out.println("File already exists!");
+//            System.exit(0);
+//        }
+//        java.io.PrintWriter output = new java.io.PrintWriter(file);
+//        output.print("??? = ");
+//        output.println("90");
+//        output.print("Eric K Jones = ");
+//        output.println("85");
+//        output.close();
+//        /*程序清单9-7 WriteData.java end*/
+
+
+        /*程序清单9-8 ReadData.java*/
+
+        java.io.File file = new java.io.File("scores.txt");
+        Scanner input = new Scanner(file);
+        while(input.hasNext())
+        {
+            String firstName = input.next();
+            String mi = input.next();
+            String lastName = input.next();
+            int score = input.nextInt();
+            System.out.println(firstName + " " + mi + " " + lastName + " " + score);
+        }
+        input.close();
+
+        /*程序清单9-8 ReadData.java end*/
     }
+}
+
+//    class Circle1
+//    {
+//        double radius;
+//
+//        Circle1()
+//        {
+//            radius = 1.0;
+//        }
+//
+//        Circle1(double newRadius)
+//        {
+//            radius = newRadius;
+//        }
+//
+//        double getArea()
+//        {
+//            return radius * radius * Math.PI;
+//        }}
+/*class用法end*/
+
 
 //    /*不定数目的输入参数*/
 //    public static void printMax(int ... input)
@@ -292,5 +379,4 @@ public class Main {
 //            return (char)(tmp - 10 + 'A');
 //    }
 //    /*程序清单5.8 输入十进制数转化成十六进制的函数end*/
-}
-
+//}
