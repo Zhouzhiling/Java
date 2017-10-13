@@ -9,5 +9,6 @@ public Clock(int hour, int minute, int second);
 public void tick();
     //“嘀嗒”一下，时间走1秒。
 public String toString();
-    //返回一个String的值，以“hh:mm:ss“的形式表示当前时间。这里每个数值都占据两位，不足两位时补0。如“00:01:22"。注意其中的冒号是西文的，不是中文的。
+    //返回一个String的值，以“hh:mm:ss“的形式表示当前时间。这里每个数值都占据两位，
+    //不足两位时补0。如“00:01:22"。注意其中的冒号是西文的，不是中文的。
 ```
